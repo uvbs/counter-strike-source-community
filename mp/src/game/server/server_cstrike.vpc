@@ -14,8 +14,8 @@ $Configuration
 {
 	$Compiler
 	{
-		$AdditionalIncludeDirectories	"$BASE;$SRCDIR\game\shared\cstrike,.\cstrike,.\cstrike\bot,.\cstrike\bot\states,$SRCDIR\game\shared\cstrike\bot,.\cstrike\hostage"
-		$AdditionalIncludeDirectories	"$BASE.\community,$SRCDIR\game\shared\community"
+		$AdditionalIncludeDirectories	"$BASE;$SRCDIR\game\shared\cstrike,$SRCDIR\game\shared\cstrike\bot,.\cstrike,.\cstrike\bot,.\cstrike\bot\states,.\cstrike\hostage"
+		$AdditionalIncludeDirectories	"$BASE;.\community,$SRCDIR\game\shared\community"
 		$PreprocessorDefinitions		"$BASE;BOTS;CSTRIKE_DLL;CS_SHIELD_ENABLED;COMMUNITY_DLL;GLOWS_ENABLE"
 	}
 }

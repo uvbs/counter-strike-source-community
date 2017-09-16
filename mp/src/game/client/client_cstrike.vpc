@@ -13,8 +13,8 @@ $Configuration
 {
 	$Compiler
 	{
-		$AdditionalIncludeDirectories		"$BASE;.\cstrike,.\cstrike\vgui,$SRCDIR\game\shared\cstrike"
-		$AdditionalIncludeDirectories		"$BASE.\community,$SRCDIR\game\shared\community"
+		$AdditionalIncludeDirectories		"$BASE;.\cstrike\vgui,.\cstrike\buy_presets,.\cstrike,$SRCDIR\game\shared\cstrike"
+		$AdditionalIncludeDirectories		"$BASE;.\community,$SRCDIR\game\shared\community"
 		$PreprocessorDefinitions			"$BASE;CSTRIKE_DLL;CS_SHIELD_ENABLED;COMMUNITY_DLL;GLOWS_ENABLE"
 	}
 }

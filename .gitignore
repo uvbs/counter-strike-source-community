@@ -54,3 +54,6 @@ config.cfg
 # shader files
 *.tmp
 
+# Windows build products
+*.filters
+*.vpc_crc
