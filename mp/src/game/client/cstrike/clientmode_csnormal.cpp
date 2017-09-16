@@ -725,7 +725,7 @@ void UpdateClassImageEntity(
 	dl->color.r = dl->color.g = dl->color.b = 250;
 	if ( ambient < 1.0f )
 	{
-        dl->color.exponent = 1 + (1 - ambient) * 2;
+		dl->color.exponent = 1 + (1 - ambient) * 2;
 	}
 	dl->radius	= 400;
 
