@@ -14,8 +14,7 @@ $Configuration
 	$Compiler
 	{
 		$AdditionalIncludeDirectories		"$BASE;$SRCDIR\game\shared\cstrike\control,.\cstrike,.\cstrike\control,.\cstrike\vgui,$SRCDIR\game\shared\cstrike"
-		$AdditionalIncludeDirectories		"$BASE.\community,$SRCDIR\game\shared\community"
-		$PreprocessorDefinitions			"$BASE;CSTRIKE_DLL;CS_SHIELD_ENABLED;COMMUNITY_DLL"
+		$PreprocessorDefinitions			"$BASE;CSTRIKE_DLL;COMMUNITY_DLL"
 	}
 }
 
@@ -63,14 +62,14 @@ $Project "Client (CStrike)"
 			$File	"$SRCDIR\game\shared\cstrike\cs_gamemovement.cpp"
 			$File	"$SRCDIR\game\shared\cstrike\cs_gamerules.cpp"
 			$File	"$SRCDIR\game\shared\cstrike\cs_gamerules.h"
-			//$File	"cstrike\cs_hud_ammo.cpp"
+			$File	"cstrike\cs_hud_ammo.cpp"
 			$File	"cstrike\cs_hud_chat.cpp"
 			$File	"cstrike\cs_hud_chat.h"
 			$File	"cstrike\cs_hud_damageindicator.cpp"
-			//$File	"cstrike\cs_hud_health.cpp"
+			$File	"cstrike\cs_hud_health.cpp"
 			$File	"cstrike\cs_hud_scope.cpp"
 			$File	"cstrike\cs_hud_target_id.cpp"
-			//$File	"cstrike\cs_hud_weaponselection.cpp"
+			$File	"cstrike\cs_hud_weaponselection.cpp"
 			$File	"cstrike\cs_in_main.cpp"
 			$File	"$SRCDIR\game\shared\cstrike\cs_player_shared.cpp"
 			$File	"$SRCDIR\game\shared\cstrike\cs_playeranimstate.cpp"
@@ -89,7 +88,7 @@ $Project "Client (CStrike)"
 			$File	"$SRCDIR\game\shared\cstrike\fx_cs_shared.cpp"
 			$File	"cstrike\fx_cs_weaponfx.cpp"
 			$File	"cstrike\hud_account.cpp"
-			//$File	"cstrike\hud_armor.cpp"
+			$File	"cstrike\hud_armor.cpp"
 			$File	"cstrike\hud_c4.cpp"
 			$File	"cstrike\hud_deathnotice.cpp"
 			$File	"cstrike\hud_defuser.cpp"
@@ -177,20 +176,6 @@ $Project "Client (CStrike)"
 				$File	"cstrike\VGUI\cstriketextwindow.h"
 				$File	"cstrike\vgui_c4panel.cpp"
 				$File	"cstrike\vgui_viewc4panel.cpp"
-			}
-			
-			$Folder	"Community"
-			{
-				$Folder	"HUD"
-				{
-					$File	"community\cs16_hud_ammo.cpp"
-					$File	"community\cs16_hud_armor.cpp"
-					$File	"community\cs16_hud_flashlight.cpp"
-					$File	"community\cs16_hud_health.cpp"
-					$File	"community\cs16_hud_weaponselection.cpp"
-					$File	"community\cs16_hud_numbers.cpp"
-					$File	"community\cs16_hud_numbers.h"
-				}
 			}
 		}
 
