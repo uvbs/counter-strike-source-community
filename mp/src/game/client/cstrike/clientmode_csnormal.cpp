@@ -42,6 +42,18 @@
 #include "prediction.h"
 #include "datacache/imdlcache.h"
 
+#if defined ( COMMUNITY_DLL ) && defined ( GLOWS_ENABLE )
+#include "glow_outline_effect.h"
+#include "clienteffectprecachesystem.h"
+#endif
+
+#if defined ( COMMUNITY_DLL ) && defined ( GLOWS_ENABLE )
+CLIENTEFFECT_REGISTER_BEGIN( PrecachePostProcessingEffectsGlow )
+	CLIENTEFFECT_MATERIAL( "dev/glow_color" )
+	CLIENTEFFECT_MATERIAL( "dev/halo_add_to_screen" )
+CLIENTEFFECT_REGISTER_END_CONDITIONAL( engine->GetDXSupportLevel() >= 90 )
+#endif
+
 class CHudChat;
 
 ConVar default_fov( "default_fov", "90", FCVAR_CHEAT );
@@ -882,3 +894,17 @@ bool ClientModeCSNormal::CanRecordDemo( char *errorMsg, int length ) const
 	return true;
 }
 
+#if defined ( COMMUNITY_DLL ) && defined ( GLOWS_ENABLE )
+bool ClientModeCSNormal::DoPostScreenSpaceEffects( const CViewSetup *pSetup )
+{
+	CMatRenderContextPtr pRenderContext( materials );
+
+	pRenderContext->PushRenderTargetAndViewport();
+	g_GlowObjectManager.RenderGlowEffects( pSetup, 0 );
+	pRenderContext->PopRenderTargetAndViewport();
+
+	pRenderContext.SafeRelease();
+
+	return BaseClass::DoPostScreenSpaceEffects( pSetup );
+}
+#endif

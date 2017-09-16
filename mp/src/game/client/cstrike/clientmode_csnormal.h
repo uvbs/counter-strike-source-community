@@ -40,6 +40,10 @@ public:
 	virtual bool	ShouldDrawViewModel( void );
 
 	virtual bool	CanRecordDemo( char *errorMsg, int length ) const;
+	
+#if defined ( COMMUNITY_DLL ) && defined ( GLOWS_ENABLE )
+	virtual bool	DoPostScreenSpaceEffects( const CViewSetup *pSetup );
+#endif
 
 private:
 	
